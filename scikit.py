@@ -14,14 +14,21 @@ y = diabetes.target
 # print("Dataset Description: \n", diabetes.DESCR)
 
 
-from sklearn.neighbors import KNeighborsRegressor
+# from sklearn.neighbors import KNeighborsRegressor
+#
+# mod = KNeighborsRegressor() #model with no learning
+# #mod.predict(X) #has not been fitted yet so will result in error
 
-mod = KNeighborsRegressor() #model with no learning
-#mod.predict(X) #has not been fitted yet so will result in error
 
+#Let's try LinearRegression
+from sklearn.linear_model import LinearRegression
+
+mod = LinearRegression()
 mod.fit(X,y)
 
 pred =  mod.predict(X) #now it works
 
 plt.scatter(pred, y)
+plt.xlabel("pred")
+plt.ylabel("actual")
 plt.show()
