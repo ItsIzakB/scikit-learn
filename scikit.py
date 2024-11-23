@@ -16,4 +16,9 @@ y = diabetes.target
 from sklearn.neighbors import KNeighborsRegressor
 
 mod = KNeighborsRegressor() #model with no learning
-mod.predict(X) #has not been fitted yet so will result in error
+#mod.predict(X) #has not been fitted yet so will result in error
+
+mod.fit(X,y)
+
+mod.predict(X) #now it works
+
