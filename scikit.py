@@ -1,5 +1,6 @@
-from sklearn.datasets import load_diabetes
+import matplotlib.pyplot as plt
 
+from sklearn.datasets import load_diabetes
 diabetes = load_diabetes()
 
 
@@ -20,5 +21,7 @@ mod = KNeighborsRegressor() #model with no learning
 
 mod.fit(X,y)
 
-mod.predict(X) #now it works
+pred =  mod.predict(X) #now it works
 
+plt.scatter(pred, y)
+plt.show()
