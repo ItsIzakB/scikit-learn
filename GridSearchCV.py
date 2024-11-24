@@ -6,6 +6,9 @@ from sklearn.model_selection import GridSearchCV
 import pandas as pd
 from IPython.display import display
 
+print(load_diabetes()['DESCR'])
+
+
 diabetes = load_diabetes()
 
 X = diabetes.data
@@ -22,4 +25,4 @@ mod.fit(X, y)
 
 dataframe = pd.DataFrame(mod.cv_results_)
 #displayed in jupyter notebook
-display(dataframe)
+# display(dataframe)
