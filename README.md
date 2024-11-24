@@ -9,3 +9,6 @@ KNRegression:
 
 LinearRegression:
 <img width="639" alt="Screenshot 2024-11-22 at 8 44 03 PM" src="https://github.com/user-attachments/assets/44a06575-8a23-42dc-ab36-8beb4ce4d6e4">
+
+With preprocessing and Pipelining: 
+<img width="635" alt="Screenshot 2024-11-23 at 7 38 16 PM" src="https://github.com/user-attachments/assets/f2886109-ab10-4bb5-982c-b2636797df30">
