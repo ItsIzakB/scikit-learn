@@ -5,3 +5,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 
+
+diabetes = load_diabetes()
+
+X = diabetes.data
+y = diabetes.target
+
+
+pipe = Pipeline([('scale', StandardScaler), ('model', KNeighborsRegressor)])
+
+
