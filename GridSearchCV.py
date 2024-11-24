@@ -14,4 +14,5 @@ y = diabetes.target
 
 pipe = Pipeline([('scale', StandardScaler), ('model', KNeighborsRegressor)])
 
+mod = GridSearchCV(estimator= pipe, param_grid= {'model_n neighbors': [1,2,3,4,5]},cv = 3)
 
