@@ -1,6 +1,4 @@
 import matplotlib.pyplot as plt
-import sklearn
-print(sklearn._version_)
 
 from sklearn.datasets import load_diabetes
 diabetes = load_diabetes()
