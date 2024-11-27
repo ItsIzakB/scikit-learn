@@ -6,3 +6,7 @@ from sklearn.pipeline import Pipeline
 
 data = pd.read_csv('../CSV_files/drawndata2.csv')
 
+X = data[['x', 'y']].values
+y = data['z'] == 'a'
+plt.scatter(X[:, 0], X[:, 1], c=y)
+plt.show()
