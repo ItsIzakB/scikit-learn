@@ -2,5 +2,5 @@
 standard scalar - preprocessing that scales X and y
 --issue: standard scalar doesn't get rid of outliers
 --solution: use QuantileTransformer -- uses quantiles
-    (like being the 99% percent)
+    (like being the 99% percentile)
 
