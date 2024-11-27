@@ -4,5 +4,5 @@ import matplotlib.pylab as plt
 from sklearn.preprocessing import QuantileTransformer
 from sklearn.pipeline import Pipeline
 
-data = pd.read_csv('drawndata2.csv')
+data = pd.read_csv('../CSV_files/drawndata2.csv')
 
