@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pylab as plt
 
 
-data = pd.read_csv('../CSV files/drawndata1.csv')
+data = pd.read_csv('../CSV_files/drawndata1.csv')
 
 # print(data.head(3))
 
