@@ -31,4 +31,4 @@ pipe.fit(X,y)
 pred = pipe.predict(X)
 
 plt.scatter(X[:, 0], X[:, 1], c=pred)
-plt.show
+plt.show()
