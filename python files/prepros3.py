@@ -12,14 +12,23 @@ y = data['z'] == 'a'
 # plt.scatter(X[:, 0], X[:, 1], c=y)
 # plt.show()
 
+#
+# pipe = Pipeline([
+#     ('scale', QuantileTransformer(n_quantiles= 1000)),
+#     ('model', LogisticRegression())
+# ])
+
+#let's try polynomialfeatures
+
+from sklearn.preprocessing import PolynomialFeatures
 
 pipe = Pipeline([
-    ('scale', QuantileTransformer(n_quantiles= 1000)),
-    ('model', LogisticRegression())
+    'scale', PolynomialFeatures(),
+    'model', LogisticRegression()
 ])
 
 pipe.fit(X,y)
 pred = pipe.predict(X)
 
 plt.scatter(X[:, 0], X[:, 1], c=pred)
-plt.show()
+plt.show
