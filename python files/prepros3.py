@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
+from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import QuantileTransformer
 from sklearn.pipeline import Pipeline
 
@@ -10,3 +11,9 @@ X = data[['x', 'y']].values
 y = data['z'] == 'a'
 plt.scatter(X[:, 0], X[:, 1], c=y)
 plt.show()
+
+
+pipe = Pipeline([
+    ('scale', QuantileTransformer(n_quantiles= 1000)),
+    ('model', LogisticRegression())
+])
