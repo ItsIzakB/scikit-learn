@@ -23,8 +23,8 @@ y = data['z'] == 'a'
 from sklearn.preprocessing import PolynomialFeatures
 
 pipe = Pipeline([
-    'scale', PolynomialFeatures(),
-    'model', LogisticRegression()
+    ('scale', PolynomialFeatures()),
+    ('model', LogisticRegression())
 ])
 
 pipe.fit(X,y)
