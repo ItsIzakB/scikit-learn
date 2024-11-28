@@ -9,11 +9,17 @@ data = pd.read_csv('../CSV_files/drawndata2.csv')
 
 X = data[['x', 'y']].values
 y = data['z'] == 'a'
-plt.scatter(X[:, 0], X[:, 1], c=y)
-plt.show()
+# plt.scatter(X[:, 0], X[:, 1], c=y)
+# plt.show()
 
 
 pipe = Pipeline([
     ('scale', QuantileTransformer(n_quantiles= 1000)),
     ('model', LogisticRegression())
 ])
+
+pipe.fit(X,y)
+pred = pipe.predict(X)
+
+plt.scatter(X[:, 0], X[:, 1], c=pred)
+plt.show()
