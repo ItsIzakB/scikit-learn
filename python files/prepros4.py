@@ -15,3 +15,4 @@ new_data = np.array(['zero']).reshape(1, -1)
 encoded_new_data = encoder.transform(new_data) #will not work unless handle_unknown = 'ignore'
 
 print('new data: ', encoded_new_data)
+#not low, medium, or high
