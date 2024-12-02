@@ -1,3 +1,8 @@
+
+Preprocessing:
 Important preprocessing type: OneHotEncoder
 --this takes text and turns that into numerical data that sci-kit learn can use
 --This is useful if the string data is y
+
+Metrics:
+-- Need metrics to choose between which models is best
