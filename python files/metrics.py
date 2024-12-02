@@ -7,4 +7,6 @@ import pandas as pd
 
 file = pd.read_csv('../CSV_files/creditcard.csv')
 
-print(file.head(3))
+X = file.drop(columns=['Time', 'Amount', 'Class'])
+y = file['Class'].values
+
