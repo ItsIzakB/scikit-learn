@@ -17,3 +17,6 @@ mod = LinearRegression()
 mod.fit(X, y)
 
 pred = mod.predict(X)
+numFraud = pred.sum()
+
+print(numFraud)
