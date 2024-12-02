@@ -1,5 +1,6 @@
 import kagglehub
 import pandas as pd
+import numpy as np
 #
 # path = kagglehub.dataset_download("mlg-ulb/creditcardfraud")
 #
@@ -15,7 +16,7 @@ print(f'shape of x: {X.shape} and shape of y: {y.shape}, '
 
 from sklearn.linear_model import LinearRegression
 
-mod = LinearRegression()
+mod = LinearRegression(class_weight)
 
 mod.fit(X, y)
 
