@@ -14,13 +14,8 @@ y = file['Class'].values
 print(f'shape of x: {X.shape} and shape of y: {y.shape}, '
       f'fraud = {y.sum()}')
 
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
 
-mod = LinearRegression(class_weight)
+mod = LogisticRegression(class_weight={0:1,1:2}, max_iter=1000)
 
-mod.fit(X, y)
-
-pred = mod.predict(X)
-numFraud = pred.sum()
-
-print(numFraud)
+mod.predict(X,y)
