@@ -40,4 +40,7 @@ grid = GridSearchCV(
 
 grid.fit(X, y)
 
-pprint(pd.DataFrame(grid.cv_results_))
+df = pd.DataFrame(grid.cv_results_)
+
+with open("output.txt", "w") as file:
+      file.write(str(df))
