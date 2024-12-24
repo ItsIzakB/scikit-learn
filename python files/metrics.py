@@ -1,6 +1,7 @@
 import kagglehub
 import pandas as pd
 import numpy as np
+from pprint import pprint
 
 #
 # path = kagglehub.dataset_download("mlg-ulb/creditcardfraud")
@@ -39,4 +40,4 @@ grid = GridSearchCV(
 
 grid.fit(X, y)
 
-print(pd.DataFrame(grid.cv_results_))
+pprint(pd.DataFrame(grid.cv_results_))
