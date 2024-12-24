@@ -22,11 +22,15 @@ mod.fit(X,y)
 ans  = mod.predict().sum
 print(ans)
 
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
+
 grid = GridSearchCV(
-      estimator = LogisticRegression(max_iter = 1000),
-      param_grid = {'class_weight'={0:1,1:v} for v in range(1,4)},
-      cv=4
-      n_jobs=-1
+    estimator=LogisticRegression(max_iter=1000),
+    param_grid={'class_weight': [{0: 1, 1: v} for v in range(1, 4)]},
+    cv=4,
+    n_jobs=-1
 )
+
+grid.fit(X,y)
 
