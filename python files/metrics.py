@@ -39,3 +39,5 @@ print(grid.cv_results_)
 pd.DataFrame(grid.cv_results_)
 
 
+from sklearn.metrics import precision_score,recall_score
+precision_score(y,grid.predict(X))
