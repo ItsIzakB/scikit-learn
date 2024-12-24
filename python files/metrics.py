@@ -19,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 mod = LogisticRegression(class_weight={0:1,1:2}, max_iter=1000)
 
 mod.fit(X,y)
-ans  = mod.predict().sum
+ans  = mod.predict(X).sum
 print(ans)
 
 from sklearn.linear_model import LogisticRegression
@@ -33,4 +33,9 @@ grid = GridSearchCV(
 )
 
 grid.fit(X,y)
+
+print(grid.cv_results_)
+
+pd.DataFrame(grid.cv_results_)
+
 
