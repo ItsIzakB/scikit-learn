@@ -6,3 +6,5 @@ Important preprocessing type: OneHotEncoder
 
 Metrics:
 -- Need metrics to choose between which models is best
+--recall_score: did i get all fraud cases
+--precision_score:given I predict fraud, how accurate am i
