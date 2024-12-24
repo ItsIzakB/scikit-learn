@@ -11,8 +11,8 @@ file = pd.read_csv('../CSV_files/creditcard.csv')
 X = file.drop(columns=['Time', 'Amount', 'Class'])
 y = file['Class'].values
 
-print(f'shape of x: {X.shape} and shape of y: {y.shape}, '
-      f'fraud = {y.sum()}')
+# print(f'shape of x: {X.shape} and shape of y: {y.shape}, '
+#       f'fraud = {y.sum()}')
 
 from sklearn.linear_model import LogisticRegression
 
@@ -24,20 +24,22 @@ print(ans)
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import precision_score,recall_score,make_scorer
 
 grid = GridSearchCV(
     estimator=LogisticRegression(max_iter=1000),
     param_grid={'class_weight': [{0: 1, 1: v} for v in range(1, 4)]},
+
+scoring={'precision:': make_scorer(precision_score), 'recall': make_scorer(recall_score)},
     cv=4,
     n_jobs=-1
 )
 
-grid.fit(X,y)
-
-print(grid.cv_results_)
-
-pd.DataFrame(grid.cv_results_)
-
-
-from sklearn.metrics import precision_score,recall_score
-precision_score(y,grid.predict(X))
+# grid.fit(X,y)
+#
+# print(grid.cv_results_)
+#
+# pd.DataFrame(grid.cv_results_)
+#
+#
+# print(precision_score(y,grid.predict(X)))
